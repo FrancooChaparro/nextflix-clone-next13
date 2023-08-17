@@ -6,8 +6,9 @@ interface Props {
   type: string;
   value: string;
   name: string;
-  error: string;
+  error?: string;
   placeholder: string;
+  errormsg?: boolean;
 }
 
 export const Input: React.FC<Props> = ({
@@ -17,11 +18,13 @@ export const Input: React.FC<Props> = ({
   name,
   error,
   placeholder,
+  errormsg
 }) => {
   return (
     <>
       <input
-        className={error && value ? styles.inputsError : styles.input}
+      
+        className={error ? (error && value ? styles.inputsError : styles.input ): (errormsg ? styles.inputsError : styles.input)}
         onChange={Onchange}
         value={value}
         name={name}

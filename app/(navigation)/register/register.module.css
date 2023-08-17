@@ -121,7 +121,11 @@
     outline: none;
 }
 
-
+.capchap { 
+    color:var(--catchap);
+    cursor: pointer;
+    font-size: var(--font-medium);
+}
 @media screen and (max-width: 875px)  { 
     .Form {
         padding: 2.688rem;   
