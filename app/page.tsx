@@ -1,9 +1,12 @@
-import styles from './page.module.css'
+import { Footer } from '@/components/Footer';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       <div>GOLAHOLA</div>
-    </main>
+      <Footer />
+    </>
+  
   )
 }
