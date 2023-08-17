@@ -14,6 +14,7 @@
     filter: brightness(110%);
     object-fit: cover;
     object-position: center;
+    transition: 2s;
 }
 
 
