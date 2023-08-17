@@ -93,6 +93,18 @@ export const page = () => {
                   is used for providing, maintaining, and improving the
                   reCAPTCHA service and for general security purposes (it is not
                   used for personalized advertising by Google).
+                  is used for providing, maintaining, and improving the
+                  reCAPTCHA service and for general security purposes (it is not
+                  used for personalized advertising by Google).
+                  is used for providing, maintaining, and improving the
+                  reCAPTCHA service and for general security purposes (it is not
+                  used for personalized advertising by Google).
+                  is used for providing, maintaining, and improving the
+                  reCAPTCHA service and for general security purposes (it is not
+                  used for personalized advertising by Google).
+                  is used for providing, maintaining, and improving the
+                  reCAPTCHA service and for general security purposes (it is not
+                  used for personalized advertising by Google).
                 </span>
               )}
             </div>
