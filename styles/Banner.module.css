@@ -1,0 +1,97 @@
+.ContainerBackground { 
+    width: 100vw;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.background { 
+    width: 100%;
+    height:  100%;
+    filter: brightness(110%);
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.containerData { 
+    position: absolute;
+    width: 50%;
+    z-index: 88; 
+    bottom: 15%;
+    left: 7%;
+}
+
+.title { 
+    font-weight: bold;
+    font-size: 37px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 18px ;
+}
+
+.description { 
+    font-weight: bold;
+    font-size:18px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+
+.btnAdd { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background-color: white;
+    color:rgb(0, 0, 0);
+    height: 34px;
+    width: 84px;
+    font-weight: bold;
+    border: none;
+    margin-right: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btnInfo { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255,0.3);
+    color:white;
+    height: 34px;
+    width: 95px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.containerBtn { 
+    display: flex;
+}
+
+.icon {
+    margin-right: 2px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 783px) {
+    .containerData { 
+        width: 65%;
+    }
+  }
+
+@media screen and (max-width: 490px) {
+    .ContainerBackground { 
+        height: 100vh;  
+    }
+    .containerData { 
+        width: 80%;
+    }
+  }
+  
+
+

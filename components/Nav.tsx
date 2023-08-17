@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import styles from "../styles/Nav.module.css";
 import { BiSearch } from "react-icons/bi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BsChevronDown } from "react-icons/bs";
-
-
+import ShowMenu from "./ShowMenu";
 
 export const Navbar = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -37,87 +36,77 @@ export const Navbar = () => {
     });
   };
 
+  const handleShow = () => { 
+    setShowMenu(!showMenu)
+    setShowBrowse(false)
+  }
+  const handleShow2 = () => { 
+    setShowMenu(false)
+    setShowBrowse(!showBrowse)
+  }
+
+  
   return (
     <div
       className={
         showBackground ? styles.containerAll : styles.containerAllOpacity
       }
     >
-        <div style={{display: "flex"}}>
-      <div className={styles.containerLogo}>
-        <img src="./images/Netflix_Logo.png" alt="LogoNetflix" />
-      </div>
-      <div className={styles.containerInfo}>   
-          <span className={styles.span1}>Home</span>  
+      <div className={styles.flex}>
+        <div className={styles.containerLogo}>
+          <img src="./images/Netflix_Logo.png" alt="LogoNetflix" />
+        </div>
+        <div className={styles.containerInfo}>
+          <span className={styles.span1}>Home</span>
           <span className={styles.span1}>Series</span>
           <span className={styles.span1}>Films</span>
           <span className={styles.span1}>New & Popular</span>
           <span className={styles.span1}>My List</span>
-          <span className={styles.span1}>Premium Netflix</span> 
-      </div>
+          <span className={styles.span1}>Premium Netflix</span>
+        </div>
 
-
-      <div className={styles.containerBrowse}>
+        <div className={styles.containerBrowse}>
           <span
             className={styles.btnBrowse}
-            onClick={() => setShowBrowse(!showBrowse)}
+            onClick={() => handleShow2()}
           >
             Menu
           </span>
-              <BsChevronDown  className={styles.btnBrowse}/>
+          <BsChevronDown className={styles.btnBrowse} />
 
-
-        {showBrowse && (
+          {showBrowse && (
             <div
-            className={showBackground ? styles.Browse : styles.BrowseOpacity}
+              className={showBackground ? styles.Browse : styles.BrowseOpacity}
             >
               <p>Home</p>
               <p>Series</p>
-              <p>Films</p> 
+              <p>Films</p>
               <p>New & Popular</p>
               <p>My List</p>
               <p>Premium Netflix</p>
-          </div>
-        )}
+            </div>
+          )}
         </div>
       </div>
 
-
       <div className={styles.containerUser}>
         <div className={styles.containerUser1}>
-            <BiSearch  />
-            <IoNotificationsOutline  />
+          <BiSearch />
+          <IoNotificationsOutline />
           <div className={styles.userDiv1}>
             <img src="/images/Netflix-avatar.png" alt="ProfilePick" />
             <div className={styles.arrow}>
               <BsChevronDown
-                onClick={() => setShowMenu(!showMenu)}
+                onClick={() => handleShow()}
                 className={showMenu ? styles.showOpen : styles.show}
               />
             </div>
           </div>
-          </div>
-          {showMenu && 
-          <div className={styles.showMenu}>
-                
-        <div className={styles.containerAvatar}>
-            <div className={styles.imagen}>
-                <img src="./images/Netflix-avatar.png" alt="Avatar" />
-            </div>
-            <div className={styles.username}>
-                <span>Franco Chaparro</span>
-            </div>
         </div>
-        
-        <div className={styles.containerLogout}><span className={styles.spans}>Sign out of Netflix</span></div>
-    </div>
-}
-        </div>
-
-
-          
-
+        {showMenu && (
+          <ShowMenu />
+        )}
       </div>
-
+    </div>
   );
 };

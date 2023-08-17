@@ -40,11 +40,14 @@
 }
 
 .containerInfo span {
-  color: rgb(255, 255, 255);
+  color: var(--primary-white);
   filter: contrast(150%) saturate(150%);
   font-size: 16px;
   margin-right: 23px;
   cursor: pointer;
+}
+.flex {
+  display: flex;
 }
 
 .containerInfo span:hover {
@@ -63,7 +66,7 @@
 .userDiv1 {
   display: flex;
   font-size: 20px;
-  color: white;
+  color: var(--primary-white);
 }
 
 .userDiv1 img {
@@ -126,75 +129,6 @@
   align-items: center;
   justify-content: space-around;
   z-index: 55;
-}
-.showMenu {
-  width: 200px;
-  background-color: black;
-  height: 160%;
-  position: absolute;
-  right: 0;
-  top: calc(100% + 5px);
-}
-
-.containerMenu {
-  height: 98px;
-  width: 190px;
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  flex-direction: column;
-}
-
-.containerMenuOpactity {
-  height: 98px;
-  width: 190px;
-  background-color: rgb(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-}
-
-.containerAvatar {
-  height: 50%;
-  width: 100%;
-  display: flex;
-  color: white;
-  font-size: 13px;
-}
-
-.imagen {
-  width: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.imagen img {
-  width: 62%;
-  height: 58%;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.username {
-  width: 75%;
-  display: flex;
-  align-items: center;
-}
-
-.containerLogout {
-  height: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 14px;
-  border-top: 1px solid grey;
-}
-
-.spans {
-  cursor: pointer;
-}
-
-.spans:hover {
-  text-shadow: 0 0 10px #b3aeae;
 }
 
 .Browse {
@@ -272,9 +206,5 @@
   .containerAllOpacity {
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .showMenu {
-    height: 98px;
-    width: 150px;
   }
 }

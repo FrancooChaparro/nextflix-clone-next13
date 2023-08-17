@@ -1,0 +1,60 @@
+.showMenu {
+    width: 200px;
+    background-color: black;
+    height: 160%;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px);
+  }
+  
+  .containerAvatar {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    color: var(--primary-white);
+    font-size: 13px;
+  }
+  
+  .imagen {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .imagen img {
+    width: 62%;
+    height: 58%;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .username {
+    width: 75%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .containerLogout {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--primary-white);
+    font-size: 14px;
+    border-top: 1px solid grey;
+  }
+  
+  .spans {
+    cursor: pointer;
+  }
+  
+  .spans:hover {
+    text-shadow: 0 0 10px #b3aeae;
+  }
+
+  @media screen and (max-width: 490px) {
+    .showMenu {
+      height: 98px;
+      width: 150px;
+    }
+  }
