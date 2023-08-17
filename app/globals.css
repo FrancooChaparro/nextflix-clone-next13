@@ -4,7 +4,7 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
     --background: #1b1b1b;
     --errors: #e87c03;
-    --input: rgb(77, 75, 75);
+    --input: rgb(61, 61, 61);
     --input-focus: rgb(104, 103, 103);
     --button-color: #e50914;
     --span-color: #858080;
@@ -12,6 +12,8 @@
     --input-placeholder: : #b6b3b3;
     --primary-white: #ffffff;
     --calc-rem: calc(14px + (20.56 - 14) * ((100vw - 280px) / (3840 - 280)));
+    --opacity-background: rgba(0, 0, 0, 0.5);
+    --font-medium: 1.063rem;
 }
 
 
