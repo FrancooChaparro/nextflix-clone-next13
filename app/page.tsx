@@ -2,12 +2,20 @@ import { Footer } from "@/components/Footer";
 import styles from "./page.module.css";
 import { Navbar } from "@/components/Nav";
 import Banner from "@/components/Banner";
+import { Card } from "@/components/Card";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Banner />
+      <br /><br />
+      <div style={{display: "flex"}}>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      </div>
       <br />
       <br />
       <br />
