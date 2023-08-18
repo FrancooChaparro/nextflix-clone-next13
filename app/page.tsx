@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Navbar } from "@/components/Nav";
 import Banner from "@/components/Banner";
 import { Card } from "@/components/Card";
+import { Landing } from "@/components/Landing";
 
 export default function Home() {
   return (
@@ -10,12 +11,15 @@ export default function Home() {
       <Navbar />
       <Banner />
       <br /><br />
-      <div style={{display: "flex"}}>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      </div>
+   
+      <Landing />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Landing />
+
+     
       <br />
       <br />
       <br />

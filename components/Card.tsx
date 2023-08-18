@@ -1,19 +1,35 @@
 "use client"
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "@/styles/Card.module.css";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
 import { MovieObject } from "@/app/types";
 
 interface MyPropsCard {
-  cardProps: MovieObject;
-  isNew: boolean;
-  AddorOut: string;
+  background: string
+  date: string
+  gender: string
+  id: string
+  idi: number
+  image: string,
+  language: string
+  overview: string
+  title: string
 }
 
 
 
-export const Card= () => {
+export const Card: React.FC<MyPropsCard> = ({ 
+  background,
+  date ,
+  gender,
+  id,
+  idi,
+  image,
+  language,
+  overview,
+  title,
+}) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [showMenu, setShowMenu] = useState<boolean>(false)
     const cardProps: MovieObject = {
@@ -40,8 +56,8 @@ export const Card= () => {
 
       <div className={styles.containerCardInfo}>
         <img
-          src={cardProps.background}
-          alt={cardProps?.title}
+          src={background}
+          alt={title}
           className={styles.image}
         />
       </div>
@@ -51,8 +67,8 @@ export const Card= () => {
         <div className={styles.containerCardInfo2}>
           <div className={styles.details}>
             <img
-              src={cardProps?.background}
-              alt={cardProps?.title}
+              src={background}
+              alt={title}
               className={styles.backgroundCard}
             />
           </div>
@@ -67,13 +83,13 @@ export const Card= () => {
             </div>
             <div className={styles.date}>
               <span style={{ color: "greenyellow" }}>New</span>
-              <span>{cardProps?.date}</span>
+              <span>{date}</span>
             </div>
             <div className={styles.duration}>
-              <span>{cardProps?.title.substring(0, 37)}</span>
+              <span>{title.substring(0, 37)}</span>
             </div>
             <div className={styles.gender}>
-              <span>{cardProps?.gender}</span>
+              <span>{gender}</span>
             </div>
           </div>
           {showMenu && <div className={styles.addMenu}>

@@ -4,12 +4,15 @@
     background-color: #1b1b1b;
     height: 28vh;
     margin-right: 10px;
+ 
+
   }
   
   .backgroundCard { 
     filter: brightness(110%);
     object-fit: cover;
     object-position: center;
+
   }
   
   
@@ -42,6 +45,7 @@
     opacity: 100;
     display: block;
     z-index: 999;
+  
     transform:scale(1)  translateY(-60px) translateX(20px) ;
   }
   
