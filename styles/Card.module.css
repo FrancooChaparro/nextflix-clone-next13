@@ -157,7 +157,7 @@
     right: 0;
     top: 65%;
     width: 240px;
-    overflow: hidden;   /* Oculta el contenido desbordado */
+    /* overflow: hidden;   Oculta el contenido desbordado */
     text-overflow: ellipsis;
     white-space: nowrap; 
     height: 80px;
