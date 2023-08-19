@@ -45,7 +45,7 @@ function validate(input: RegisterForm) {
   return errors;
 }
 
-const page = () => {
+const Register = () => {
   const [inputValues, setInputValues] = useState<RegisterForm>({
     username: "",
     email: "",
@@ -124,4 +124,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Register;

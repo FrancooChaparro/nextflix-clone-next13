@@ -1,10 +1,10 @@
 "use client";
 import { LoginForm } from "@/app/types";
 import styles from "../register/register.module.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/Input";
 
-export const page = () => {
+export const Login = () => {
   const [errormsg, setErrormsg] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(true);
   const [inputValues, setInputValues] = useState<LoginForm>({
@@ -74,7 +74,7 @@ export const page = () => {
               <span className={styles.SignLink}>Sign up now.</span> <br />
               <span className={styles.Sign}>
                 This page is protected by Google CAPTCHA to ensure you're not a
-                bot.{" "}
+                bot.
               </span>
               {open && (
                 <span onClick={() => setOpen(!open)} className={styles.capchap}>
@@ -115,4 +115,4 @@ export const page = () => {
   );
 };
 
-export default page;
+export default Login;

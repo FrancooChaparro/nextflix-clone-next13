@@ -16,7 +16,7 @@ export const Landing = () => {
       <div  className={styles.container}>
         {
           MoviesData.map(e => { 
-            return <Card  background={e.background}
+            return <Card key={e.id}  background={e.background}
             date={e.date} 
             gender={e.gender}
             id={e.id}

@@ -1,12 +1,12 @@
 import styles from "./user.module.css";
 
 
-const page = () => {
+const User = () => {
   return (
     <div className={styles.containerAll}>
     <div className={styles.container}>
         <div className={styles.top}>
-            <h1>Who's Watching?</h1>
+            <h1>Whos Watching?</h1>
         </div>
         <div className={styles.bot}>
            <img src="/images/Netflix-avatar.png" alt="Logo" className={styles.Hover}/>
@@ -17,4 +17,4 @@ const page = () => {
   )
 }
 
-export default page;
+export default User;

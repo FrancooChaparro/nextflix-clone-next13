@@ -93,7 +93,7 @@ export const Card: React.FC<MyPropsCard> = ({
             </div>
           </div>
           {showMenu && <div className={styles.addMenu}>
-            <div className={styles.addMenu1}>"AddorOut"</div>
+            <div className={styles.addMenu1}>AddorOut</div>
             <div className={styles.addMenu2}>Ver Detalles</div>
           </div> }
         </div>
