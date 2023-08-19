@@ -1,0 +1,123 @@
+.center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .containerBack { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+  }
+  .containerBack button { 
+    color: #bd0c0c;
+    background-color: #1b1b1b;
+    width: 50px;
+    height: 50px;
+  }
+  .container {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    border: 2px solid rgb(61, 61, 61);
+    box-shadow: 0px 0px 50px rgb(0, 0, 0);
+  }
+  
+  .containerImg {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .containerImg img {
+    width: 80%;
+     object-fit: cover; 
+   object-position:center;
+    height: 83%;
+    filter: brightness(110%);
+  
+  }
+  
+  .containerData {
+    width: 75%;
+    height: 100%;
+    color: white; 
+  }
+  
+  .containerData p { 
+    width: 85%;
+  }
+  .containerData h1 {
+    font-size: 50px;
+  }
+  
+  
+  .spinner {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      border-radius: 50%;
+      border: 4px solid #1b1b1b;
+      border-top-color: #bd0c0c;
+      animation: spin 0.8s linear infinite;
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  
+    @media screen and (max-width: 855px)  { 
+      .containerData h1{
+        font-size: 28px;
+      width: 90%;
+  
+      }
+      .containerImg {
+        width: 100%;
+        height: 35%;
+        filter: brightness(110%);
+      
+      }
+      .containerData {
+        height: 65%;
+        width: 95%;
+        padding-left: 10%;
+  
+      }
+      .container { 
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+  } 
+  
+  @media screen and (max-width: 645px)  { 
+    .containerData h1{
+      font-size: 24px;
+      width: 90%;
+    }
+   }
+  
+   @media screen and (max-width: 510px)  { 
+    .containerData h1{
+     
+      width: 90%;
+      font-size: 22px;
+    }
+   }
+  
+   @media screen and (max-width: 450px)  { 
+    .containerData h1{
+      font-size: 22px;
+      width: 90%;
+  
+    }
+   }
