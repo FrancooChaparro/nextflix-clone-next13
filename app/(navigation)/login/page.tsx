@@ -3,6 +3,8 @@ import { LoginForm } from "@/app/types";
 import styles from "../register/register.module.css";
 import React, { useState } from "react";
 import { Input } from "@/components/Input";
+import { FcGoogle } from "react-icons/fc";
+import { Captcha } from "@/components/Captcha";
 
 export const Login = () => {
   const [errormsg, setErrormsg] = useState<boolean>(false);
@@ -32,7 +34,7 @@ export const Login = () => {
   }
 
   return (
-    <div className={open ? styles.containerAll : styles.containerAll2 }>
+    <div className={styles.containerAll}>
       <div className={styles.containerOpacity}>
         <nav className={styles.nav}>
           <img
@@ -70,43 +72,14 @@ export const Login = () => {
               <button onClick={() => handleSubmit()} className={styles.btn}>
                 Login
               </button>
+              <div className={styles.containerbtn}>
+                <button>
+                  <FcGoogle />
+                </button>
+              </div>
               <span className={styles.Sign}>New to Netflix?</span>
               <span className={styles.SignLink}>Sign up now.</span> <br />
-              <span className={styles.Sign}>
-                This page is protected by Google CAPTCHA to ensure you're not a
-                bot.
-              </span>
-              {open && (
-                <span onClick={() => setOpen(!open)} className={styles.capchap}>
-                  Learn more.
-                </span>
-              )}
-              {!open && (
-                <span className={styles.Sign}>
-                 
-                  The information collected by Google reCAPTCHA is subject to
-                  the Google
-                  <span className={styles.capchap}>
-                    Privacy Policy
-                  </span> and
-                  <span className={styles.capchap}>Terms of Service</span>, and
-                  is used for providing, maintaining, and improving the
-                  reCAPTCHA service and for general security purposes (it is not
-                  used for personalized advertising by Google).
-                  is used for providing, maintaining, and improving the
-                  reCAPTCHA service and for general security purposes (it is not
-                  used for personalized advertising by Google).
-                  is used for providing, maintaining, and improving the
-                  reCAPTCHA service and for general security purposes (it is not
-                  used for personalized advertising by Google).
-                  is used for providing, maintaining, and improving the
-                  reCAPTCHA service and for general security purposes (it is not
-                  used for personalized advertising by Google).
-                  is used for providing, maintaining, and improving the
-                  reCAPTCHA service and for general security purposes (it is not
-                  used for personalized advertising by Google).
-                </span>
-              )}
+              <Captcha open={open} setOpen={setOpen} />
             </div>
           </div>
         </div>

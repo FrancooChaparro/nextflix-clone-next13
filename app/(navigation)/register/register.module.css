@@ -12,7 +12,7 @@
 .containerAll2 {
     position: relative;
     width: 100vw;
-    height: 149vh;
+    height: 155vh;
     background-image: url("../../../public/images/img1.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -136,6 +136,28 @@
     color:var(--catchap);
     cursor: pointer;
     font-size: var(--font-medium);
+}
+
+.containerbtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerbtn button { 
+    width: 44px;
+    height: 44px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    transition: 1s;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.containerbtn button:hover {
+    opacity: 0.6;
 }
 @media screen and (max-width: 875px)  { 
     .Form {
