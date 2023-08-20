@@ -9,6 +9,17 @@
     background-size: cover;
 }
 
+.containerAll2 {
+    position: relative;
+    width: 100vw;
+    height: 149vh;
+    background-image: url("../../../public/images/img1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .containerOpacity {
     position: absolute;
     top: 0;

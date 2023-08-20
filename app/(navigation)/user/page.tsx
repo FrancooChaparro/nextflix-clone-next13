@@ -6,7 +6,7 @@ const User = () => {
     <div className={styles.containerAll}>
     <div className={styles.container}>
         <div className={styles.top}>
-            <h1>Whos Watching?</h1>
+            <h1>Who's Watching?</h1>
         </div>
         <div className={styles.bot}>
            <img src="/images/Netflix-avatar.png" alt="Logo" className={styles.Hover}/>

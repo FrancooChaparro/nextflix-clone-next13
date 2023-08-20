@@ -32,7 +32,7 @@ export const Login = () => {
   }
 
   return (
-    <div className={styles.containerAll}>
+    <div className={open ? styles.containerAll : styles.containerAll2 }>
       <div className={styles.containerOpacity}>
         <nav className={styles.nav}>
           <img
@@ -83,12 +83,12 @@ export const Login = () => {
               )}
               {!open && (
                 <span className={styles.Sign}>
-                  {" "}
+                 
                   The information collected by Google reCAPTCHA is subject to
-                  the Google{" "}
+                  the Google
                   <span className={styles.capchap}>
                     Privacy Policy
-                  </span> and{" "}
+                  </span> and
                   <span className={styles.capchap}>Terms of Service</span>, and
                   is used for providing, maintaining, and improving the
                   reCAPTCHA service and for general security purposes (it is not

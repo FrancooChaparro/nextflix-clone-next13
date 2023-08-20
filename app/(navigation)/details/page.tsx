@@ -24,7 +24,7 @@ const movieID = {
             <img src={movieID?.image} alt={movieID?.title} />
           </div>
           <div className={styles.containerData}>
-            <div>
+            {/* <div> */}
               <h1>{movieID?.title}</h1>
               <h3>
                 {movieID?.date} · {movieID?.gender} · (
@@ -36,7 +36,7 @@ const movieID = {
           </div>
         </div>
       
-     </div>
+    //  </div>
   );
 };
 
