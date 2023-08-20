@@ -63,7 +63,7 @@
     border: none;
     margin-bottom: 12px;
     margin-top: 8px;
-    border-radius: 3%;
+    border-radius: 4px;
     color: white;
     font-size: var(--font-medium);
     padding-left: 18px;
@@ -83,7 +83,7 @@
     border: none;
     color: var(--primary-white);
     font-size: var(--font-medium);
-    border-radius: 4%;
+    border-radius: 4px;
     margin-top: 10px;
     margin-bottom: 20px;
     cursor: pointer;
