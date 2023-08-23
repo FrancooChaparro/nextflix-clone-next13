@@ -203,23 +203,40 @@
     .duration span {
         font-size: 12px;
     }
-    /* .containerCardInfo2:hover {
-      display: block;
+    .containerCard { 
+      width: 90vw;
+    }
+    .containerCardInfo, .containerCardInfo2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .containerCardInfo {
+      height: 28vh;
+      z-index: 2;
+    }
+
+    .containerCardInfo:hover { 
       opacity: 100;
-      z-index: 99;
-      transform:scale(1)  translateY(-30px) translateX(10px);
     }
     .containerCardInfo:hover + .containerCardInfo2 { 
-      opacity: 100;
-      display: block;
-      z-index: 999;
-      transform:scale(1)  translateY(-30px) translateX(10px) ;
-    } */
-    .containerCardInfo2{ 
       display: none;
     }
+    
+    
+    .containerCardInfo2 {
+     display: none;
+    }
+    
+    
     .containerCard:hover .containerCardInfo {
       opacity: 100;
+    }
+    
+    
+    .containerCardInfo2:hover {
+     display: none;
     }
     
   }

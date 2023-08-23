@@ -32,5 +32,13 @@
 @media screen and (max-width: 450px) { 
     .containerAll { 
         overflow-y: scroll;
+        height: max-content;
     } 
+    .container { 
+        grid-template-columns: repeat(17,auto);
+        grid-template-rows: repeat(1,1fr);
+        padding: 1.2rem;
+        grid-gap: 1.3rem;
+    }
+    
   }
