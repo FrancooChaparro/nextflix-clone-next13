@@ -56,10 +56,11 @@ export const Card: React.FC<MyPropsCard> = ({
   
   }
 
+
   return (
     <div className={styles.containerCard}>
       <div className={styles.containerCardInfo}>
-        <img src={background} alt={title} className={styles.image} />
+        <img  src={background} alt={title} className={styles.image} />
       </div>
 
       <div className={styles.containerCardInfo2}>

@@ -5,8 +5,10 @@ import React, { useState } from "react";
 import { Input } from "@/components/Input";
 import { FcGoogle } from "react-icons/fc";
 import { Captcha } from "@/components/Captcha";
+import { useRouter } from "next/navigation";
 
 export const Login = () => {
+  const router = useRouter();
   const [errormsg, setErrormsg] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(true);
   const [inputValues, setInputValues] = useState<LoginForm>({
@@ -29,7 +31,7 @@ export const Login = () => {
       }, 5000);
       return;
     } else {
-      return;
+      return router.push("/user")
     }
   }
 
@@ -78,7 +80,7 @@ export const Login = () => {
                 </button>
               </div>
               <span className={styles.Sign}>New to Netflix?</span>
-              <span className={styles.SignLink}>Sign up now.</span> <br />
+              <span className={styles.SignLink} onClick={()=> router.push("/register")}>Sign up now.</span> <br />
               <Captcha open={open} setOpen={setOpen} />
             </div>
           </div>

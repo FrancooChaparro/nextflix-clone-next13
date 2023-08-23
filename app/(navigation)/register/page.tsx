@@ -3,7 +3,7 @@ import { RegisterForm } from "@/app/types";
 import styles from "./register.module.css";
 import { useState } from "react";
 import { Input } from "@/components/Input";
-
+import { useRouter } from "next/navigation";
 function validate(input: RegisterForm) {
   let errors = {
     username: "",
@@ -46,6 +46,7 @@ function validate(input: RegisterForm) {
 }
 
 const Register = () => {
+  const router = useRouter();
   const [inputValues, setInputValues] = useState<RegisterForm>({
     username: "",
     email: "",
@@ -115,7 +116,7 @@ const Register = () => {
 
               <button className={styles.btn}>Sign up</button>
               <span className={styles.Sign}>Already have an account?</span>
-              <span className={styles.SignLink}>Login.</span>
+              <span className={styles.SignLink} onClick={()=> router.push("/login")}>Login.</span>
             </div>
           </div>
         </div>
