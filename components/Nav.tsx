@@ -5,8 +5,10 @@ import { BiSearch } from "react-icons/bi";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BsChevronDown } from "react-icons/bs";
 import ShowMenu from "./ShowMenu";
+import { useRouter } from 'next/navigation';
 
 export const Navbar = () => {
+  const router = useRouter();
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [showBrowse, setShowBrowse] = useState<boolean>(false);
   const TOP_OFFSET = 66;
@@ -45,7 +47,6 @@ export const Navbar = () => {
     setShowBrowse(!showBrowse)
   }
 
-  
   return (
     <div
       className={
@@ -57,11 +58,11 @@ export const Navbar = () => {
           <img src="./images/Netflix_Logo.png" alt="LogoNetflix" />
         </div>
         <div className={styles.containerInfo}>
-          <span className={styles.span1}>Home</span>
-          <span className={styles.span1}>Series</span>
-          <span className={styles.span1}>Films</span>
-          <span className={styles.span1}>New & Popular</span>
-          <span className={styles.span1}>My List</span>
+          <span className={styles.span1} onClick={() => handleClick(0)}>Home</span>
+          <span className={styles.span1} onClick={() => handleClick(550)}>Series</span>
+          <span className={styles.span1} onClick={() => handleClick(950)}>Films</span>
+          <span className={styles.span1} onClick={() => handleClick(1250)}>New & Popular</span>
+          <span className={styles.span1} onClick={() => handleClick(950)}>My List</span>
           <span className={styles.span1}>Premium Netflix</span>
         </div>
 
@@ -84,15 +85,15 @@ export const Navbar = () => {
               <p>New & Popular</p>
               <p>My List</p>
               <p>Premium Netflix</p>
-            </div>
+           </div>
           )}
         </div>
       </div>
 
       <div className={styles.containerUser}>
         <div className={styles.containerUser1}>
-          <BiSearch />
-          <IoNotificationsOutline />
+          <BiSearch className={styles.icon} onClick={() => router.push('/search')}/>
+          <IoNotificationsOutline className={styles.icon}/>
           <div className={styles.userDiv1}>
             <img src="/images/Netflix-avatar.png" alt="ProfilePick" />
             <div className={styles.arrow}>

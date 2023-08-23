@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "../styles/ShowMenu.module.css";
+import { useRouter } from 'next/navigation';
+
 
 const ShowMenu = () => {
+  const router = useRouter();
   return (
     <div className={styles.showMenu}>
       <div className={styles.containerAvatar}>
@@ -13,7 +16,7 @@ const ShowMenu = () => {
         </div>
       </div>
       <div className={styles.containerLogout}>
-        <span className={styles.spans}>Sign out of Netflix</span>
+        <span className={styles.spans} onClick={() => router.push('/login')}>Sign out of Netflix</span>
       </div>
     </div>
   );

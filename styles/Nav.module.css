@@ -167,6 +167,9 @@
   width: max-content;
   padding: 5px;
 }
+.icon { 
+  cursor: pointer;
+}
 
 @media screen and (max-width: 783px) {
   .containerLogo img {

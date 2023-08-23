@@ -1,7 +1,12 @@
+"use client"
+import Image from "next/image";
 import styles from "./user.module.css";
+import { useRouter } from 'next/navigation';
 
 
 const User = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.containerAll}>
     <div className={styles.container}>
@@ -9,7 +14,7 @@ const User = () => {
             <h1>Who's Watching?</h1>
         </div>
         <div className={styles.bot}>
-           <img src="/images/Netflix-avatar.png" alt="Logo" className={styles.Hover}/>
+           <Image width={160} height={160}  src="/images/Netflix-avatar.png" alt="Logo" className={styles.Hover} onClick={() => router.push('/')}/>
            <h4>Franco Chaparro</h4>
         </div>
     </div>
