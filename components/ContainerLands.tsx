@@ -6,21 +6,53 @@ import { Landing } from "./Landing";
 export const ContainerLands = () => {
   const AllMovies: Array<MovieObject> | [] = MoviesData;
 
-  const terror: Array<MovieObject> | [] = AllMovies.filter(
-    (movie: MovieObject) => movie.gender === "Terror"
-  ).slice(0, 17);
-  const trending: Array<MovieObject> | [] = AllMovies.filter(
-    (movie: MovieObject) => movie.gender === "Trending"
-  ).slice(0, 17);
-  const comedy: Array<MovieObject> | [] = AllMovies.filter(
-    (movie: MovieObject) => movie.gender === "Comedy"
-  ).slice(0, 17);
-  const Music: Array<MovieObject> | [] = AllMovies.filter(
-    (movie: MovieObject) => movie.gender === "Music"
-  ).slice(0, 17);
-  const tv: Array<MovieObject> | [] = AllMovies.filter(
-    (movie: MovieObject) => movie.gender === "TV"
-  ).slice(0, 17);
+  const filterAndSliceMovies = (
+    genre: string,
+    limit: number,
+    movies: Array<MovieObject>
+  ): Array<MovieObject> => {
+    return movies.reduce(
+      (accumulator: Array<MovieObject>, movie: MovieObject) => {
+        if (accumulator.length < limit && movie.gender === genre) {
+          accumulator.push(movie);
+        }
+        return accumulator;
+      },
+      []
+    );
+  };
+  
+  const terror: Array<MovieObject> = filterAndSliceMovies(
+    "Terror",
+    17,
+    AllMovies
+  );
+  
+  const trending: Array<MovieObject> = filterAndSliceMovies(
+    "Trending",
+    17,
+    AllMovies
+  );
+  
+  const comedy: Array<MovieObject> = filterAndSliceMovies(
+    "Comedy",
+    17,
+    AllMovies
+  );
+  
+  const Music: Array<MovieObject> = filterAndSliceMovies(
+    "Music",
+    17,
+    AllMovies
+  );
+  
+  const tv: Array<MovieObject> = filterAndSliceMovies(
+    "TV",
+    17,
+    AllMovies
+  );
+  
+console.log(terror.length, "+2");
 
   return (
     <>
