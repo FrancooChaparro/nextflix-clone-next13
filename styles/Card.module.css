@@ -1,6 +1,6 @@
 .containerCard {
     position: relative;
-    width: 420px;
+    width: 23vw;
     background-color: #1b1b1b;
     height: 28vh;
     margin-right: 10px;
@@ -156,7 +156,6 @@
     right: 0;
     top: 65%;
     width: 240px;
-    /* overflow: hidden;   Oculta el contenido desbordado */
     text-overflow: ellipsis;
     white-space: nowrap; 
     height: 80px;
@@ -197,14 +196,14 @@
     cursor: pointer; 
     transform: rotate(180deg)
   }
+ 
   
-  
-  @media screen and (max-width: 450px) { 
+  @media screen and (max-width: 1012px) { 
     .duration span {
         font-size: 12px;
     }
     .containerCard { 
-      width: 90vw;
+      width: 30vw;
     }
     .containerCardInfo, .containerCardInfo2 {
       position: absolute;
@@ -237,6 +236,24 @@
     
     .containerCardInfo2:hover {
      display: none;
+    }
+    .image:hover {
+      transform: scale(1.032); 
+     transition: transform .35s ease-in-out;
+     border: 1.5px solid white;
+     }
+  }
+
+  @media screen and (max-width: 562px) { 
+    .containerCard {
+      width: 45vw;
+    }
+  }
+
+
+  @media screen and (max-width: 486px) { 
+    .containerCard {
+      width: 90vw;
     }
     
   }

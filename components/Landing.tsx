@@ -5,16 +5,25 @@ import { Card } from "./Card";
 import { MoviesData } from "@/models/banner";
 import { MovieObject } from "@/app/types";
 
-export const Landing = () => {
-
+interface Props { 
+  movie: Array<MovieObject> ;
+  isNew: boolean;
+  title: string;
+}
+export const Landing: React.FC<Props> = ( {
+  movie,
+  isNew,
+  title
+}) => {
   return (
 
      <div className={styles.containerAll}>
-        <h3>Section</h3>
+        <h3>{title}</h3>
         <div className={styles.container}>
-          {MoviesData.map((e) => {
+          {movie.map((e) => {
             return (
               <Card
+               isNew={isNew}
                 key={e.id}
                 background={e.background}
                 date={e.date}

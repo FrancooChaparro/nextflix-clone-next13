@@ -15,6 +15,7 @@ interface MyPropsCard {
   language: string
   overview: string
   title: string
+  isNew: boolean
 }
 
 
@@ -29,6 +30,7 @@ export const Card: React.FC<MyPropsCard> = ({
   language,
   overview,
   title,
+  isNew
 }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [showMenu, setShowMenu] = useState<boolean>(false)
@@ -80,7 +82,7 @@ export const Card: React.FC<MyPropsCard> = ({
               </div>
             </div>
             <div className={styles.date}>
-              <span style={{ color: "greenyellow" }}>New</span>
+              <span style={{ color: "greenyellow" }}>{isNew ? "New" : null }</span>
               <span>{date}</span>
             </div>
             <div className={styles.duration}>

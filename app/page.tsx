@@ -2,95 +2,16 @@ import { Footer } from "@/components/Footer";
 import styles from "./page.module.css";
 import { Navbar } from "@/components/Nav";
 import Banner from "@/components/Banner";
-import { Card } from "@/components/Card";
-import { Landing } from "@/components/Landing";
+import { ContainerLands } from "@/components/ContainerLands";
 
 export default function Home() {
+ 
+  
   return (
     <>
       <Navbar />
       <Banner />
-      <Landing />
-      <Landing />
-
-     
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
+      <ContainerLands />
       <Footer />
     </>
   );

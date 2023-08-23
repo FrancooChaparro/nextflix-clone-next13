@@ -987,7 +987,7 @@ export const MoviesData =
            "overview": "Melody Maker Magazine's Chief Contributing Photographer(1965-1975), Barrie Wentzell tells the story of the rise and fall of the magazine, which marked the end to a style of rock n' roll journalism that no longer exit's today.",
            "image": "https://image.tmdb.org/t/p/original/z521Q2X94hgLUtqP1HAbZqxhUu5.jpg",
            "date": "2019-12-17",
-           "background": "https://image.tmdb.org/t/p/originalnull",
+           "background": "https://image.tmdb.org/t/p/original/3t0DcVPuW9JRtc1CWnh1ktCKrrO.jpg",
            "gender": "Music"
        },
        {
