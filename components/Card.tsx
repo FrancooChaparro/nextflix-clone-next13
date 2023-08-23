@@ -52,8 +52,6 @@ export const Card: React.FC<MyPropsCard> = ({
   return (
     <div className={styles.containerCard}>
 
-
-
       <div className={styles.containerCardInfo}>
         <img
           src={background}

@@ -10,13 +10,7 @@ export default function Home() {
     <>
       <Navbar />
       <Banner />
-      <br /><br />
-   
       <Landing />
-      <br />
-      <br />
-      <br />
-      <br />
       <Landing />
 
      

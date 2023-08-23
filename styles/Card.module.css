@@ -4,7 +4,6 @@
     background-color: #1b1b1b;
     height: 28vh;
     margin-right: 10px;
- 
 
   }
   
@@ -66,7 +65,7 @@
   .containerCardInfo2:hover {
     display: block;
     opacity: 100;
-    z-index: 99;
+    z-index: 999;
     transform:scale(1)  translateY(-60px) translateX(20px) ;
   }
   
@@ -204,7 +203,7 @@
     .duration span {
         font-size: 12px;
     }
-    .containerCardInfo2:hover {
+    /* .containerCardInfo2:hover {
       display: block;
       opacity: 100;
       z-index: 99;
@@ -215,5 +214,12 @@
       display: block;
       z-index: 999;
       transform:scale(1)  translateY(-30px) translateX(10px) ;
+    } */
+    .containerCardInfo2{ 
+      display: none;
     }
+    .containerCard:hover .containerCardInfo {
+      opacity: 100;
+    }
+    
   }
