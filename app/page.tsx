@@ -12,6 +12,8 @@ export default function Home() {
       <Navbar />
       <Banner />
       <ContainerLands />
+      <br /><br /><br /> <br />
+      <br /><br /><br />
       <Footer />
     </>
   );

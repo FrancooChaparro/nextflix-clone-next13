@@ -33,14 +33,12 @@ body {
   font-family: var(--font-Roboto), var(--font-mono);
   color: var(--primary-white);
   font-size: var(--calc-rem);
-
-
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
-  scroll-padding: 0 0.2rem;
-  /* padding: 0 0 6rem; */
-  overflow-x: hidden;
+  scroll-padding: 0 0.2rem; 
+
 }
+
 /* Agrega estos estilos al archivo CSS correspondiente */
 
 /* Estilos para la barra de desplazamiento en general */
