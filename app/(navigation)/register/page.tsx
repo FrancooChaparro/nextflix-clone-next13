@@ -4,6 +4,8 @@ import styles from "./register.module.css";
 import { useState } from "react";
 import { Input } from "@/components/Input";
 import { useRouter } from "next/navigation";
+import { useMyContext } from "@/context/ListContext";
+
 function validate(input: RegisterForm) {
   let errors = {
     username: "",
@@ -46,6 +48,7 @@ function validate(input: RegisterForm) {
 }
 
 const Register = () => {
+  const { user, RegisterAction } = useMyContext();
   const router = useRouter();
   const [inputValues, setInputValues] = useState<RegisterForm>({
     username: "",
@@ -71,6 +74,12 @@ const Register = () => {
         [e.target.name]: e.target.value,
       })
     );
+  }
+
+  function signUp () {
+    if (errors.username || errors.password || errors.email) return 
+    RegisterAction(inputValues)
+    router.push("/login")
   }
   return (
     <div className={styles.containerAll}>
@@ -114,7 +123,7 @@ const Register = () => {
                 error={errors.password}
               />
 
-              <button className={styles.btn}>Sign up</button>
+              <button className={styles.btn} onClick={()=> signUp()}>Sign up</button>
               <span className={styles.Sign}>Already have an account?</span>
               <span className={styles.SignLink} onClick={()=> router.push("/login")}>Login.</span>
             </div>

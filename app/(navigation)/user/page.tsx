@@ -2,9 +2,11 @@
 import Image from "next/image";
 import styles from "./user.module.css";
 import { useRouter } from 'next/navigation';
+import { useMyContext } from "@/context/ListContext";
 
 
 const User = () => {
+  const { user, session } = useMyContext();
   const router = useRouter();
 
   return (
@@ -15,7 +17,7 @@ const User = () => {
         </div>
         <div className={styles.bot}>
            <Image width={160} height={160}  src="/images/Netflix-avatar.png" alt="Logo" className={styles.Hover} onClick={() => router.push('/')}/>
-           <h4>Franco Chaparro</h4>
+           <h4>{session ? user.username : "Franco Chaparro"}</h4>
         </div>
     </div>
 </div>

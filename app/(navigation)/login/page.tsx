@@ -6,8 +6,11 @@ import { Input } from "@/components/Input";
 import { FcGoogle } from "react-icons/fc";
 import { Captcha } from "@/components/Captcha";
 import { useRouter } from "next/navigation";
+import { useMyContext } from "@/context/ListContext";
 
 export const Login = () => {
+  const { user, LoginAction, session } = useMyContext();
+  console.log(user);
   const router = useRouter();
   const [errormsg, setErrormsg] = useState<boolean>(false);
   const [open, setOpen] = useState<boolean>(true);
@@ -31,7 +34,8 @@ export const Login = () => {
       }, 5000);
       return;
     } else {
-      return router.push("/user")
+      LoginAction(inputValues)
+      if(session) router.push("/user")
     }
   }
 

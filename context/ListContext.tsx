@@ -1,11 +1,16 @@
 "use client"
 import { createContext, useContext } from 'react';
-import { MovieObject } from '@/app/types';
+import { LoginForm, MovieObject, RegisterForm } from '@/app/types';
 
 export type MyContextType = {
   MyList: MovieObject[] | [];
   AddMyList: (newValue: MovieObject) => void;
   DeleteMyList: (newValue: MovieObject) => void;
+  user: RegisterForm;
+  RegisterAction: (newValue: RegisterForm) => void;
+  LoginAction: (newValue: LoginForm) => void;
+  session: boolean;
+  OutSign:() => void; 
 };
 
 const MyContext = createContext<MyContextType | undefined>(undefined);
