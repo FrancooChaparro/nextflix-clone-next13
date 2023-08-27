@@ -79,7 +79,7 @@ export const Card: React.FC<MyPropsCard> = ({
         </div>
         <div className={styles.details2}>
           <div className={styles.icons}>
-            <div className={styles.play}>
+            <div className={styles.play} onClick={() => router.push(`/details/${id}`)}>
               <BsFillPlayFill />
             </div>
             <div onClick={() => setShowMenu(!showMenu)} className={styles.more}>
