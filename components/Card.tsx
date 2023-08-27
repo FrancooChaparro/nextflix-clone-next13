@@ -92,8 +92,8 @@ export const Card: React.FC<MyPropsCard> = ({
         </div>
         {showMenu && (
           <div className={styles.addMenu}>
-            <div className={styles.addMenu1} onClick={()=> router.push(`/details/${id}`)}>AddorOut</div>
-            <div className={styles.addMenu2}>Ver Detalles</div>
+            <div className={styles.addMenu1}>AddorOut</div>
+            <div className={styles.addMenu2} onClick={()=> router.push(`/details/${id}`)}>Ver Detalles</div>
           </div>
         )}
       </div>

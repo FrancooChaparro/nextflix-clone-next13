@@ -55,7 +55,7 @@ export const Navbar = () => {
     >
       <div className={styles.flex}>
         <div className={styles.containerLogo}>
-          <img src="./images/Netflix_Logo.png" alt="LogoNetflix" />
+          <img src="./images/Netflix_Logo.png" alt="LogoNetflix" onClick={() => handleClick(0)}/>
         </div>
         <div className={styles.containerInfo}>
           <span className={styles.span1} onClick={() => handleClick(0)}>Home</span>

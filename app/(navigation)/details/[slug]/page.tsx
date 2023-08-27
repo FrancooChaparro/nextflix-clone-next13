@@ -15,8 +15,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     if (mov) {
       setmovieID(mov);
     } else {
-      // Manejar el caso en el que no se encontró la película
-      console.log(`No se encontró ninguna película con el id ${params.slug}`);
+      router.push("/")
     }
   };
 
@@ -26,7 +25,6 @@ export default function Page({ params }: { params: { slug: string } }) {
   }, [params.slug]);
 
   if (movieID === undefined) {
-    // Muestra el spinner mientras se obtienen los detalles de la película
     return (
       <div className={styles.containerSpinner}>
         <div className={styles.spinner} />
