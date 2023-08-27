@@ -4,6 +4,7 @@ import styles from "@/styles/Card.module.css";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
 import { MovieObject } from "@/app/types";
+import { useRouter } from "next/navigation";
 
 interface MyPropsCard {
   background: string;
@@ -32,7 +33,7 @@ export const Card: React.FC<MyPropsCard> = ({
 }) => {
  
   const [showMenu, setShowMenu] = useState<boolean>(false);
-
+  const router = useRouter();
   // const addMyListToStore = (props: MovieObject, text: string ) => {
   //   if (text === "Quitar de mi lista") { 
   //     const OutList = OutMyList(props);
@@ -70,7 +71,7 @@ export const Card: React.FC<MyPropsCard> = ({
         <div className={styles.details2}>
           <div className={styles.icons}>
             <div className={styles.play}>
-              <BsFillPlayFill />
+              <BsFillPlayFill/>
             </div>
             <div onClick={() => setShowMenu(!showMenu)} className={styles.more}>
               <BsChevronDown
@@ -91,7 +92,7 @@ export const Card: React.FC<MyPropsCard> = ({
         </div>
         {showMenu && (
           <div className={styles.addMenu}>
-            <div className={styles.addMenu1}>AddorOut</div>
+            <div className={styles.addMenu1} onClick={()=> router.push(`/details/${id}`)}>AddorOut</div>
             <div className={styles.addMenu2}>Ver Detalles</div>
           </div>
         )}
