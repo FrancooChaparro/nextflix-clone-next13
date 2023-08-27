@@ -5,6 +5,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
 import { MovieObject } from "@/app/types";
 import { useRouter } from "next/navigation";
+import { useMyContext } from "@/context/ListContext";
 
 interface MyPropsCard {
   background: string;
@@ -17,6 +18,7 @@ interface MyPropsCard {
   overview: string;
   title: string;
   isNew: boolean;
+  AddorOut: string;
 }
 
 export const Card: React.FC<MyPropsCard> = ({
@@ -30,38 +32,45 @@ export const Card: React.FC<MyPropsCard> = ({
   overview,
   title,
   isNew,
+  AddorOut
 }) => {
- 
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const router = useRouter();
-  // const addMyListToStore = (props: MovieObject, text: string ) => {
-  //   if (text === "Quitar de mi lista") { 
-  //     const OutList = OutMyList(props);
-  //     setShowMenu(!showMenu)
-  //    return dispatch(OutList);
-  //   }
-    
-  //   const existentMovie = MyListMovies.find((e) => e.title === props.title);
+  const { AddMyList, DeleteMyList } = useMyContext();
 
-  //   if (existentMovie) {
-  //     setShowMenu(!showMenu)
-  //     alert("Ya está en tu lista");
-  //   } else {
-  //     const action = addMyList(props);
-  //     setShowMenu(!showMenu)
-  //     dispatch(action);
-  //   }
-  // };
-
-  function linktag () { 
-  
+  function addList() {
+    AddMyList({
+      id,
+      idi,
+      title,
+      language,
+      overview,
+      image,
+      date,
+      background,
+      gender,
+    })
+    setShowMenu(!showMenu)
   }
-
+  function deleteList() {
+    DeleteMyList({
+      id,
+      idi,
+      title,
+      language,
+      overview,
+      image,
+      date,
+      background,
+      gender,
+    })
+    setShowMenu(!showMenu)
+  }
 
   return (
     <div className={styles.containerCard}>
       <div className={styles.containerCardInfo}>
-        <img  src={background} alt={title} className={styles.image} />
+        <img src={background} alt={title} className={styles.image} />
       </div>
 
       <div className={styles.containerCardInfo2}>
@@ -71,7 +80,7 @@ export const Card: React.FC<MyPropsCard> = ({
         <div className={styles.details2}>
           <div className={styles.icons}>
             <div className={styles.play}>
-              <BsFillPlayFill/>
+              <BsFillPlayFill />
             </div>
             <div onClick={() => setShowMenu(!showMenu)} className={styles.more}>
               <BsChevronDown
@@ -92,8 +101,27 @@ export const Card: React.FC<MyPropsCard> = ({
         </div>
         {showMenu && (
           <div className={styles.addMenu}>
-            <div className={styles.addMenu1}>AddorOut</div>
-            <div className={styles.addMenu2} onClick={()=> router.push(`/details/${id}`)}>Ver Detalles</div>
+         {AddorOut == "ADD List" ?
+           <div
+              className={styles.addMenu1}
+              onClick={() => addList()}
+            >
+              {AddorOut}
+            </div>
+            :
+            <div
+            className={styles.addMenu1}
+            onClick={() => deleteList()}
+          >
+            {AddorOut}
+          </div>
+}
+            <div
+              className={styles.addMenu2}
+              onClick={() => router.push(`/details/${id}`)}
+            >
+              Ver Detalles
+            </div>
           </div>
         )}
       </div>

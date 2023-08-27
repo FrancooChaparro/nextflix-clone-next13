@@ -9,11 +9,13 @@ interface Props {
   movie: Array<MovieObject> ;
   isNew: boolean;
   title: string;
+  AddorOut: string;
 }
 export const Landing: React.FC<Props> = ( {
   movie,
   isNew,
-  title
+  title,
+  AddorOut
 }) => {
   return (
 
@@ -34,6 +36,7 @@ export const Landing: React.FC<Props> = ( {
                 language={e.language}
                 overview={e.overview}
                 title={e.title}
+                AddorOut={AddorOut}
               />
             );
           })}
