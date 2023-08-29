@@ -8,7 +8,7 @@ import { Captcha } from "@/components/Captcha";
 import { useRouter } from "next/navigation";
 import { useMyContext } from "@/context/ListContext";
 
-export const Loger = () => {
+const Loger = () => {
   const { user, LoginAction, session } = useMyContext();
   const router = useRouter();
   const [errormsg, setErrormsg] = useState<boolean>(false);

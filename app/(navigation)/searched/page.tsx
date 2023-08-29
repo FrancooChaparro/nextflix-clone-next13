@@ -7,7 +7,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MoviesData } from "@/models/data"
 
 
-export const Search = () => {
+const Search = () => {
   let movie: Array<MovieObject> | [] = MoviesData; 
   const [load, setLoad] = useState<boolean>(true);
   const [countrie, setCountrie] = useState<string>("");
