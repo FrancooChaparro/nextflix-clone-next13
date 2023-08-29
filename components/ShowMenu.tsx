@@ -9,7 +9,7 @@ const ShowMenu = () => {
   const { user, session, OutSign } = useMyContext();
   function signOut () { 
     OutSign()
-    router.push('/loger')
+    router.push('/login')
   }
   return (
     <div className={styles.showMenu}>

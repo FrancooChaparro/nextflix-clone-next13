@@ -125,7 +125,7 @@ const Register = () => {
 
               <button className={styles.btn} onClick={()=> signUp()}>Sign up</button>
               <span className={styles.Sign}>Already have an account?</span>
-              <span className={styles.SignLink} onClick={()=> router.push("/loger")}>Login.</span>
+              <span className={styles.SignLink} onClick={()=> router.push("/login")}>Login.</span>
             </div>
           </div>
         </div>
