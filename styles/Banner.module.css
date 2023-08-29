@@ -29,14 +29,14 @@
 
 .title { 
     font-weight: bold;
-    font-size: 37px;
+    font-size: 28px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 18px ;
+    margin-bottom: 13px ;
 }
 
 .description { 
     font-weight: bold;
-    font-size:18px;
+    font-size:14px;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     margin-bottom: 12px;
 }
@@ -48,12 +48,12 @@
     border-radius: 6px;
     background-color: white;
     color:rgb(0, 0, 0);
-    height: 34px;
+    height: 32px;
     width: 84px;
     font-weight: bold;
     border: none;
     margin-right: 7px;
-    font-size: 14px;
+    font-size: 11px;
     cursor: pointer;
 }
 .btnInfo { 
@@ -64,10 +64,10 @@
     font-weight: bold;
     background-color: rgba(255, 255, 255,0.3);
     color:white;
-    height: 34px;
+    height: 32px;
     width: 95px;
     border: none;
-    font-size: 14px;
+    font-size: 11px;
     cursor: pointer;
 }
 
@@ -77,7 +77,7 @@
 
 .icon {
     margin-right: 2px;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 @media screen and (max-width: 783px) {

@@ -89,7 +89,7 @@ const Register = () => {
             src="/images/Netflix_Logo.png"
             alt="Logo"
             className={styles.img}
-            height={70}
+            height={55}
           />
         </nav>
         <div className={styles.containerForm}>

@@ -1,20 +1,20 @@
 .containerAll {
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
-  height: 70px;
+  height: 50px;
   width: 100vw;
   position: fixed;
   z-index: 1000;
   transition: background-color 0.5s ease;
   padding-left: 55px;
-  padding-right: 80px;
+  padding-right: 55px;
   justify-content: space-between;
 }
 
 .containerAllOpacity {
   background-color: rgba(0, 0, 0, 0.05);
   display: flex;
-  height: 70px;
+  height: 50px;
   width: 100vw;
   position: fixed;
   z-index: 1000;
@@ -28,10 +28,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 .containerLogo img {
-  height: 52px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -43,7 +43,7 @@
 .containerInfo span {
   color: var(--primary-white);
   filter: contrast(150%) saturate(150%);
-  font-size: 16px;
+  font-size: 12px;
   margin-right: 23px;
   cursor: pointer;
 }
@@ -60,20 +60,20 @@
   width: 170px;
   display: flex;
   justify-content: space-around;
-  font-size: 28px;
+  font-size: 12px;
   align-items: center;
 }
 
 .userDiv1 {
   display: flex;
-  font-size: 20px;
+  font-size: 14px;
   color: var(--primary-white);
 }
 
 .userDiv1 img {
   border-radius: 4px;
-  height: 34px;
-  width: 33px;
+  height: 25px;
+  width: 25px;
   cursor: pointer;
 }
 
@@ -87,11 +87,16 @@
 
 .show {
   cursor: pointer;
+  font-size: 0.85rem;
+
+
 }
 
 .showOpen {
   cursor: pointer;
   transform: rotate(180deg);
+  font-size: 0.85rem;
+
 }
 
 .link {
@@ -115,7 +120,7 @@
 }
 .containerUser {
   height: 100%;
-  width: 170px;
+  width: 130px;
   display: flex;
   font-size: 28px;
   align-items: center;
@@ -125,7 +130,7 @@
 
 .containerUser1 {
   height: 100%;
-  width: 170px;
+  width: 130px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -170,6 +175,7 @@
 }
 .icon { 
   cursor: pointer;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 783px) {

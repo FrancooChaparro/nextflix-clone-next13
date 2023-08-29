@@ -39,14 +39,14 @@ const Login = () => {
   }
 
   return (
-    <div className={styles.containerAll}>
+    <div className={open ? styles.containerAll : styles.containerAll2}>
       <div className={styles.containerOpacity}>
         <nav className={styles.nav}>
           <img
             src="/images/Netflix_Logo.png"
             alt="Logo"
             className={styles.img}
-            height={70}
+            height={55}
           />
         </nav>
         <div className={styles.containerForm}>

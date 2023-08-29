@@ -13,7 +13,7 @@
     --primary-white: #ffffff;
     --calc-rem: calc(14px + (20.56 - 14) * ((100vw - 280px) / (3840 - 280)));
     --opacity-background: rgba(0, 0, 0, 0.5);
-    --font-medium: 1.063rem;
+    --font-medium: 0.8rem;
     --catchap:  #0080ff;
     --hover-effect: 1px 1px 4px 4px rgb(233, 226, 226);;
 }
