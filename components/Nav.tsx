@@ -92,7 +92,7 @@ export const Navbar = () => {
 
       <div className={styles.containerUser}>
         <div className={styles.containerUser1}>
-          <BiSearch className={styles.icon} onClick={() => router.push('/search')}/>
+          <BiSearch className={styles.icon} onClick={() => router.push('/searched')}/>
           <IoNotificationsOutline className={styles.icon}/>
           <div className={styles.userDiv1}>
             <img src="/images/Netflix-avatar.png" alt="ProfilePick" />
