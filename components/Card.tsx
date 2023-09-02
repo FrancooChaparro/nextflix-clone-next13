@@ -71,26 +71,28 @@ export const Card: React.FC<MyPropsCard> = ({
   return (
     <div className={styles.containerCard}>
       <div className={styles.containerCardInfo}>
-        {/* <img src={background} alt={title} className={styles.image} /> */}
-        <Image 
+        <img src={background} alt={title} className={styles.image} />
+        {/* <Image 
           src={background}
           alt={title}
-          height={200}
+          height={180}
           width={300}
           className={styles.background}
-        />
+          style={{objectFit: "cover"}}
+        /> */}
       </div>
 
       <div className={styles.containerCardInfo2}>
         <div className={styles.details}>
-          {/* <img src={background} alt={title} className={styles.backgroundCard} /> */}
-          <Image 
+          <img src={background} alt={title} className={styles.backgroundCard} />
+          {/* <Image 
           src={background}
           alt={title}
           height={200}
           width={300}
-          className={styles.background}
-        />
+          className={styles.backgroundCard}
+          style={{objectFit: "cover"}}
+        /> */}
         </div>
         <div className={styles.details2}>
           <div className={styles.icons}>
