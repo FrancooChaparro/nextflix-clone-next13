@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+                                                 NETFLIX PROYECT
 
-## Getting Started
+Desarrollo del BackEnd con Javascript & TypeScript, manejo de sistema CRUD y modelado de la base de datos con Node.Js y PostgreSQL. Desarrollo del FrontEnd con Javascript, modelado y creación de componentes responsive en React utilizando Redux.
 
-First, run the development server:
+Ruta Register, creas tu usario, el form esta totalmente controlado en backend y frontend.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+![register](./public/images/Register.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-------------------------------------------------------------------------------------------------------------
+Ruta Login, accedes a tu cuenta previamente registrada o podes logear con Google, tiene GoogleAuth, En este preciso momento no tengo cargado el backend por eso lo tengo deshabilitado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![login](./public/images/Login.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![login](./public/images/loginauth.png)
 
-## Learn More
+-------------------------------------------------------------------------------------------------------------
 
-To learn more about Next.js, take a look at the following resources:
+Ruta User, Accedes a tu cuenta y te redirige al Home de NETFLIX.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![user](./public/images/user.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-------------------------------------------------------------------------------------------------------------
 
-## Deploy on Vercel
+El home tiene un slider que va cambiando de portada de pelicula cada 14seg, la navbar cuenta con un sistema de apagado de color cuando esta en la parte superior, y cuando deslizas se hace oscura, tiene varias secciones donde podes ver las diferentes peliculas y un hover con mas details de cada una y una funcion particular de MyList para crear tu propia lista. Justo abajo del todo un footer Con mis datos.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![home](./public/images/home.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-------------------------------------------------------------------------------------------------------------
+
+Ruta Search, podes buscar las peliculas que desees por nombre, o por generos, y tiene una barra de busqueda totalmente controlada, cuenta con un mini navbar inclinada para redireccionar al Home, y puede acceder a mas detallaes de cada pelicula haciendo un click en la que quieras. Toda la app es responsive.
+
+![search](./public/images/search.png)
+
+![movile](./public/images/movile.png)
+
+-------------------------------------------------------------------------------------------------------------
+
+Detalles de la card, genero, fecha de lanzamiento titulo, imagen, lenguaje y una breve descipcion.
+
+![card](./public/images/card.png)
