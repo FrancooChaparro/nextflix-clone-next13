@@ -4,6 +4,7 @@ import styles from "../Details.module.css";
 import { MoviesData } from "@/models/data";
 import { MovieObject } from "@/app/types";
 import { useRouter } from "next/navigation";
+import { IoIosArrowBack, IoMdArrowRoundBack } from "react-icons/io";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const [movieID, setmovieID] = useState<MovieObject>();
@@ -35,7 +36,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   return (
     <div className={styles.center}>
       <div className={styles.containerBack}>
-        <button onClick={() => router.push("/")}>Volver</button>
+        <button onClick={() => router.push("/")}><IoMdArrowRoundBack /></button>
       </div>
       <div className={styles.container}>
         <div className={styles.containerImg}>

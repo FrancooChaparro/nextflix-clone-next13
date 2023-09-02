@@ -64,7 +64,7 @@ const Search = () => {
       e.preventDefault();
       setLoad(true);
       handleSearch(e);
-      setnameTitle("Peliculas");
+      setnameTitle("Movies");
     }
   };
 

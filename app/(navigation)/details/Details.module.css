@@ -34,12 +34,17 @@
     left: 0;
     top: 0;
     padding: 15px;
-  }
+
+}
   .containerBack button { 
-    color: #bd0c0c;
+    color: #b42828;
     background-color: #1b1b1b;
     width: 50px;
     height: 50px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
   }
   .container {
     width: 90%;

@@ -118,7 +118,7 @@ export const Card: React.FC<MyPropsCard> = ({
         </div>
         {showMenu && (
           <div className={styles.addMenu}>
-         {AddorOut == "ADD List" ?
+         {AddorOut == "Add List" ?
            <div
               className={styles.addMenu1}
               onClick={() => addList()}
@@ -137,7 +137,7 @@ export const Card: React.FC<MyPropsCard> = ({
               className={styles.addMenu2}
               onClick={() => router.push(`/details/${id}`)}
             >
-              Ver Detalles
+              View Details
             </div>
           </div>
         )}

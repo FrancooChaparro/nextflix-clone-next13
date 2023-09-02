@@ -33,8 +33,9 @@ const Login = () => {
       }, 5000);
       return;
     } else {
-      LoginAction(inputValues)
-      if(session) router.push("/user")
+      // LoginAction(inputValues)
+      // if(session) router.push("/user")
+      router.push("/user")
     }
   }
 
