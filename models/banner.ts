@@ -78,17 +78,6 @@ export const MoviesData =
         "gender": "Action"
     },
     {
-        "id": "33",
-        "idi": 1048300,
-        "title": "Adrenaline",
-        "language": "en",
-        "overview": "A female FBI agent holidaying in Eastern Europe with her family gets her life upside down when her daughter is kidnapped. She has to team up with a criminal on the run to save her daughter before time runs out.",
-        "image": "https://image.tmdb.org/t/p/original/qVzRt8c2v4gGBYsnaflXVVeQ9Lh.jpg",
-        "date": "2022-12-15",
-        "background": "https://image.tmdb.org/t/p/original/nDmPjKLqLwWyd4Ssti8HCdhW5cZ.jpg",
-        "gender": "Action"
-    },
-    {
         "id": "34",
         "idi": 505642,
         "title": "Black Panther: Wakanda Forever",
@@ -188,4 +177,15 @@ export const MoviesData =
      "background": "https://image.tmdb.org/t/p/original/bT3IpP7OopgiVuy6HCPOWLuaFAd.jpg",
      "gender": "Action"
  },
+ {
+    "id": "33",
+    "idi": 1048300,
+    "title": "Adrenaline",
+    "language": "en",
+    "overview": "A female FBI agent holidaying in Eastern Europe with her family gets her life upside down when her daughter is kidnapped. She has to team up with a criminal on the run to save her daughter before time runs out.",
+    "image": "https://image.tmdb.org/t/p/original/qVzRt8c2v4gGBYsnaflXVVeQ9Lh.jpg",
+    "date": "2022-12-15",
+    "background": "https://image.tmdb.org/t/p/original/nDmPjKLqLwWyd4Ssti8HCdhW5cZ.jpg",
+    "gender": "Action"
+}
 ]
