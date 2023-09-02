@@ -517,17 +517,7 @@ export const MoviesData =
            "background": "https://image.tmdb.org/t/p/original/1PRWW60yQparK1I8Soyy9Evf7Dv.jpg",
            "gender": "Comedy"
        },
-       {
-           "id": "48",
-           "idi": 536554,
-           "title": "M3GAN",
-           "language": "en",
-           "overview": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her ne",
-           "image": "https://image.tmdb.org/t/p/original/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
-           "date": "2022-12-28",
-           "background": "https://image.tmdb.org/t/p/original/dlrWhn0G3AtxYUx2D9P2bmzcsvF.jpg",
-           "gender": "Comedy"
-       },
+
        {
            "id": "49",
            "idi": 676710,
