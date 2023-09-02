@@ -1,99 +1,95 @@
-.ContainerBackground { 
-    width: 100vw;
-    height: 80vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 1rem;
+.ContainerBackground {
+  width: 100vw;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 1rem;
 }
 
-.background { 
-    width: 100%;
-    height:  100%;
-    filter: brightness(110%);
-    object-fit: cover;
-    object-position: center;
-    transition: 2s;
+.background {
+  width: 100%;
+  height: 100%;
+  filter: brightness(110%);
+  object-fit: cover;
+  object-position: center;
+  transition: 2s;
 }
 
-
-.containerData { 
-    position: absolute;
-    width: 50%;
-    z-index: 88; 
-    bottom: 15%;
-    left: 7%;
+.containerData {
+  position: absolute;
+  width: 50%;
+  z-index: 88;
+  bottom: 15%;
+  left: 7%;
 }
 
-.title { 
-    font-weight: bold;
-    font-size: 28px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 13px ;
+.title {
+  font-weight: bold;
+  font-size: 1.75rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.813rem;
 }
 
-.description { 
-    font-weight: bold;
-    font-size:14px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
+.description {
+  font-weight: bold;
+  font-size: 0.875rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
 }
 
-.btnAdd { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    background-color: white;
-    color:rgb(0, 0, 0);
-    height: 32px;
-    width: 84px;
-    font-weight: bold;
-    border: none;
-    margin-right: 7px;
-    font-size: 11px;
-    cursor: pointer;
+.btnAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: var(--primary-white);
+  color: rgb(0, 0, 0);
+  height: 32px;
+  width: 84px;
+  font-weight: bold;
+  border: none;
+  margin-right: 7px;
+  font-size: 0.688rem;
+  cursor: pointer;
 }
-.btnInfo { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    font-weight: bold;
-    background-color: rgba(255, 255, 255,0.3);
-    color:white;
-    height: 32px;
-    width: 95px;
-    border: none;
-    font-size: 11px;
-    cursor: pointer;
+.btnInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--primary-white);
+  height: 32px;
+  width: 95px;
+  border: none;
+  font-size: 0.688rem;
+  cursor: pointer;
 }
 
-.containerBtn { 
-    display: flex;
+.containerBtn {
+  display: flex;
 }
 
 .icon {
-    margin-right: 2px;
-    font-size: 15px;
+  margin-right: 2px;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 783px) {
-    .containerData { 
-        width: 65%;
-    }
+  .containerData {
+    width: 65%;
   }
+}
 
 @media screen and (max-width: 490px) {
-    .ContainerBackground { 
-        height: 100vh;  
-    }
-    .containerData { 
-        width: 80%;
-    }
+  .ContainerBackground {
+    height: 100vh;
   }
-  
-
-
+  .containerData {
+    width: 80%;
+  }
+}

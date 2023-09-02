@@ -1,6 +1,5 @@
 .containerFooter { 
     position: absolute;
-    /* bottom: 0; */
     height: 175px;
     width: 100vw;
     background-color: rgb(133, 31, 31);
@@ -14,7 +13,7 @@
 
 .ContactMeComponent_container_all {
   position: absolute;
-  background-color: #1b1b1b;
+  background-color: var(--background);
   width: 100%;
   height: 120px;
   height: 170px;
@@ -27,7 +26,7 @@
 .ContactMeComponent_container_all h1 {
   text-align: center;
   margin: 0px;
-  color: white;
+  color:var(--primary-white);
   padding: 0px;
   letter-spacing: -1px;
   font-size: 2.2rem;

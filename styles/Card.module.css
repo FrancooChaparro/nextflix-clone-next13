@@ -1,7 +1,7 @@
 .containerCard {
     position: relative;
     width: 22.5vw;
-    background-color: #1b1b1b;
+    background-color:var(--background);
     height: 28vh;
     margin-right: 10px;
 
@@ -106,21 +106,21 @@
   .date { 
     height: 23%;
     width: 100%;
-    color: white;
+    color:var(--primary-white);
   }
   .gender { 
     height: 23%;
     width: 100%;
-    color: white;
+    color:var(--primary-white);
   }
   .duration { 
     height: 23%;
     width: 100%;
-    color: white;
+    color:var(--primary-white);
   }
   
   .play { 
-    background-color: aliceblue;
+    background-color:var(--primary-white);
     border-radius: 50%;
     color: black;
     font-size: 23px;
@@ -137,8 +137,8 @@
   .more { 
     background-color: #353434;
     border-radius: 50%;
-    color: white;
-    border: 2px solid white;
+    color: var(--primary-white);
+    border: 2px solid var(--primary-white);
     font-size: 18px;
     font-weight: bold;
     width: 12%;
@@ -160,7 +160,7 @@
     height: 80px;
     background-color:#383737;
     font-size: 15px;
-    color: white;
+    color: var(--primary-white);
     box-shadow: 20px 20px 50px rgb(0, 0, 0);
     z-index: 10;
     border: 1px solid rgb(20, 20, 20);
@@ -239,7 +239,7 @@
     .image:hover {
       transform: scale(1.032); 
      transition: transform .35s ease-in-out;
-     border: 1.5px solid white;
+     border: 1.5px solid var(--background);
      }
   }
 

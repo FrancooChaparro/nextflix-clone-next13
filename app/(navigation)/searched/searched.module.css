@@ -1,10 +1,10 @@
 .containerAll {
     width: 100vw;
     display: flex;
-    background-color: #1b1b1b;
+    background-color:var(--background);
 }
 .containerNavbar { 
-    background-color:  #1b1b1b;;
+    background-color: var(--background);
     width: 5%;
     height:191vh;
     box-shadow: 0px -5px 11px rgb(5, 5, 5);
@@ -27,7 +27,7 @@
 
 .containerInput input { 
     width: 92%;
-    background-color:  #1b1b1b;
+    background-color: var(--background);
     height: 38px;
     border: 1px solid grey;
     color: rgb(206, 204, 204);
@@ -43,11 +43,11 @@
 .containerBtn button { 
     width: 88%;
     color: rgb(158, 152, 152);
-    background-color:  #1b1b1b;
+    background-color: var(--background);
     height: 34px;
     font-size: 20px;
     border-radius: 2px;
-    border: 2.5px solid #1b1b1b;
+    border: 2.5px solidvar(--background);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -66,7 +66,7 @@
 
 }
 .containerRight { 
-    background-color: #1b1b1b;
+    background-color:var(--background);
     color: white;
     width: 70%;
     box-shadow: 0px 30px 30px rgb(0, 0, 0);

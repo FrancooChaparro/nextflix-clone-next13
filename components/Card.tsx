@@ -6,6 +6,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { MovieObject } from "@/app/types";
 import { useRouter } from "next/navigation";
 import { useMyContext } from "@/context/ListContext";
+import Image from "next/image";
 
 interface MyPropsCard {
   background: string;
@@ -70,12 +71,26 @@ export const Card: React.FC<MyPropsCard> = ({
   return (
     <div className={styles.containerCard}>
       <div className={styles.containerCardInfo}>
-        <img src={background} alt={title} className={styles.image} />
+        {/* <img src={background} alt={title} className={styles.image} /> */}
+        <Image 
+          src={background}
+          alt={title}
+          height={200}
+          width={300}
+          className={styles.background}
+        />
       </div>
 
       <div className={styles.containerCardInfo2}>
         <div className={styles.details}>
-          <img src={background} alt={title} className={styles.backgroundCard} />
+          {/* <img src={background} alt={title} className={styles.backgroundCard} /> */}
+          <Image 
+          src={background}
+          alt={title}
+          height={200}
+          width={300}
+          className={styles.background}
+        />
         </div>
         <div className={styles.details2}>
           <div className={styles.icons}>
