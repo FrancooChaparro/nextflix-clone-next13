@@ -7,35 +7,41 @@ import { MoviesData } from "@/models/banner";
 import { MovieObject } from "@/app/types";
 import { useMyContext } from "@/context/ListContext";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Banner = () => {
   const router = useRouter();
   const Movies = MoviesData;
   const [num, setNum] = useState<number>(0);
   const { AddMyList } = useMyContext();
+  const poster: MovieObject = Movies?.[num] ?? {};
 
   useEffect(() => {
-    if (num === 19) {
-      setNum(0);
-    }
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (num === 13) {
-        setNum(0);
-      } else {
-        setNum((num) => num + 1);
-      }
-    }, 8000);
-
+    const interval = startInterval();
     return () => clearInterval(interval);
-  }, [num]);
+  }, []);
 
-  const poster: MovieObject = Movies[num];
+  const startInterval = () => {
+    return setInterval(() => {
+      setNum((num) => (num === 13 ? 0 : num + 1));
+    }, 8000);
+  };
+
+
+
+  
   return (
     <div className={styles.ContainerBackground}>
-      <img src={poster.background} alt="logo" className={styles.background} />
+       <Image
+        src={poster?.background}
+        alt="poster"
+        className={styles.background}
+        fill
+        // loading="lazy"
+        priority
+        // placeholder="blur" 
+        // blurDataURL="/images/ajax_poster_blur.webp"
+      />
       <div className={styles.containerData}>
         <p className={styles.title}>{poster.title}</p>
         <p className={styles.description}>{poster.overview}</p>

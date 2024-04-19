@@ -6,6 +6,7 @@ import { IoNotificationsOutline } from "react-icons/io5";
 import { BsChevronDown } from "react-icons/bs";
 import ShowMenu from "./ShowMenu";
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 
 export const Navbar = () => {
   const router = useRouter();
@@ -55,7 +56,15 @@ export const Navbar = () => {
     >
       <div className={styles.flex}>
         <div className={styles.containerLogo}>
-          <img src="./images/Netflix_Logo.png" alt="LogoNetflix" onClick={() => handleClick(0)}/>
+        <Image
+            src="/images/Netflix_Logo.png"
+            alt="LogoNetflix"
+            onClick={() => handleClick(0)}
+            width={70}
+            height={40}
+            priority
+            loading="eager"
+          />
         </div>
         <div className={styles.containerInfo}>
           <span className={styles.span1} onClick={() => handleClick(0)}>Home</span>
@@ -95,7 +104,13 @@ export const Navbar = () => {
           <BiSearch className={styles.icon} onClick={() => router.push('/searched')}/>
           <IoNotificationsOutline className={styles.icon}/>
           <div className={styles.userDiv1}>
-            <img src="/images/Netflix-avatar.png" alt="ProfilePick" />
+          <Image
+            src="/images/Netflix-avatar.png"
+            alt="ProfilePick"
+            width={25}
+            height={25}
+            loading="lazy"
+          />
             <div className={styles.arrow}>
               <BsChevronDown
                 onClick={() => handleShow()}

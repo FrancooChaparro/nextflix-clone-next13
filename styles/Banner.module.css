@@ -10,64 +10,55 @@
 }
 
 .background {
-  width: 100%;
-  height: 100%;
   filter: brightness(110%);
   object-fit: cover;
   object-position: center;
-  transition: 2s;
 }
 
 .containerData {
   position: absolute;
   width: 50%;
-  z-index: 88;
+  z-index: 2;
   bottom: 15%;
   left: 7%;
 }
+.title, .description {
+  font-weight: bold;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
 
 .title {
-  font-weight: bold;
   font-size: 1.75rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   margin-bottom: 0.813rem;
 }
 
 .description {
-  font-weight: bold;
   font-size: 0.875rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   margin-bottom: 0.75rem;
 }
 
-.btnAdd {
+
+.btnAdd, .btnInfo {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
-  background-color: var(--primary-white);
-  color: rgb(0, 0, 0);
   height: 32px;
   width: 84px;
   font-weight: bold;
   border: none;
-  margin-right: 7px;
   font-size: 0.688rem;
   cursor: pointer;
 }
+
+.btnAdd {
+  background-color: var(--primary-white);
+  color: rgb(0, 0, 0);
+  margin-right: 7px;
+}
 .btnInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  font-weight: bold;
   background-color: rgba(255, 255, 255, 0.3);
   color: var(--primary-white);
-  height: 32px;
-  width: 95px;
-  border: none;
-  font-size: 0.688rem;
-  cursor: pointer;
 }
 
 .containerBtn {
@@ -89,6 +80,7 @@
   .ContainerBackground {
     height: 100vh;
   }
+
   .containerData {
     width: 80%;
   }
