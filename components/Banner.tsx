@@ -27,8 +27,6 @@ const Banner = () => {
     }, 8000);
   };
 
-
-
   
   return (
     <div className={styles.ContainerBackground}>

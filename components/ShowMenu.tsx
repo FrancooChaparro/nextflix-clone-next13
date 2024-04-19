@@ -18,7 +18,7 @@ const ShowMenu = () => {
           <img src="./images/Netflix-avatar.png" alt="Avatar" />
         </div>
         <div className={styles.username}>
-          <span>{session ? user.username : "Franco Chaparro"}</span>
+          <span>{session ? user?.username : "Franco Chaparro"}</span>
         </div>
       </div>
       <div className={styles.containerLogout}>
