@@ -4,7 +4,6 @@
     background-color:var(--background);
     height: 28vh;
     margin-right: 10px;
-
   }
   
   .backgroundCard { 
@@ -43,10 +42,8 @@
     opacity: 100;
     display: block;
     z-index: 999;
-  
     transform:scale(1)  translateY(-60px) translateX(20px) ;
   }
-  
   
   .containerCardInfo2 {
     z-index: 1;

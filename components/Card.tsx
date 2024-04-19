@@ -3,10 +3,8 @@ import React, { useState } from "react";
 import styles from "@/styles/Card.module.css";
 import { BsFillPlayFill } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
-import { MovieObject } from "@/app/types";
 import { useRouter } from "next/navigation";
 import { useMyContext } from "@/context/ListContext";
-import Image from "next/image";
 
 interface MyPropsCard {
   background: string;
@@ -33,7 +31,7 @@ export const Card: React.FC<MyPropsCard> = ({
   overview,
   title,
   isNew,
-  AddorOut
+  AddorOut,
 }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const router = useRouter();
@@ -50,8 +48,8 @@ export const Card: React.FC<MyPropsCard> = ({
       date,
       background,
       gender,
-    })
-    setShowMenu(!showMenu)
+    });
+    setShowMenu(!showMenu);
   }
   function deleteList() {
     DeleteMyList({
@@ -64,39 +62,26 @@ export const Card: React.FC<MyPropsCard> = ({
       date,
       background,
       gender,
-    })
-    setShowMenu(!showMenu)
+    });
+    setShowMenu(!showMenu);
   }
 
   return (
     <div className={styles.containerCard}>
       <div className={styles.containerCardInfo}>
         <img src={background} alt={title} className={styles.image} />
-        {/* <Image 
-          src={background}
-          alt={title}
-          height={180}
-          width={300}
-          className={styles.background}
-          style={{objectFit: "cover"}}
-        /> */}
       </div>
 
       <div className={styles.containerCardInfo2}>
         <div className={styles.details}>
           <img src={background} alt={title} className={styles.backgroundCard} />
-          {/* <Image 
-          src={background}
-          alt={title}
-          height={200}
-          width={300}
-          className={styles.backgroundCard}
-          style={{objectFit: "cover"}}
-        /> */}
         </div>
         <div className={styles.details2}>
           <div className={styles.icons}>
-            <div className={styles.play} onClick={() => router.push(`/details/${id}`)}>
+            <div
+              className={styles.play}
+              onClick={() => router.push(`/details/${id}`)}
+            >
               <BsFillPlayFill />
             </div>
             <div onClick={() => setShowMenu(!showMenu)} className={styles.more}>
@@ -118,21 +103,15 @@ export const Card: React.FC<MyPropsCard> = ({
         </div>
         {showMenu && (
           <div className={styles.addMenu}>
-         {AddorOut == "Add List" ?
-           <div
-              className={styles.addMenu1}
-              onClick={() => addList()}
-            >
-              {AddorOut}
-            </div>
-            :
-            <div
-            className={styles.addMenu1}
-            onClick={() => deleteList()}
-          >
-            {AddorOut}
-          </div>
-}
+            {AddorOut == "Add List" ? (
+              <div className={styles.addMenu1} onClick={() => addList()}>
+                {AddorOut}
+              </div>
+            ) : (
+              <div className={styles.addMenu1} onClick={() => deleteList()}>
+                {AddorOut}
+              </div>
+            )}
             <div
               className={styles.addMenu2}
               onClick={() => router.push(`/details/${id}`)}

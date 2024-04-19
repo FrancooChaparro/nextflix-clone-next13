@@ -22,8 +22,7 @@ export const Input: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <input
-      
+      <input   
         className={error ? (error && value ? styles.inputsError : styles.input ): (errormsg ? styles.inputsError : styles.input)}
         onChange={Onchange}
         value={value}

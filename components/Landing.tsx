@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "@/styles/Landing.module.css";
 import { Card } from "./Card";
-import { MoviesData } from "@/models/banner";
 import { MovieObject } from "@/app/types";
 
 interface Props { 
@@ -18,7 +17,6 @@ export const Landing: React.FC<Props> = ( {
   AddorOut
 }) => {
   return (
-
      <div className={styles.containerAll}>
         <h3>{title}</h3>
         <div className={styles.container}>
