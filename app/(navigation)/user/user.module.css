@@ -1,11 +1,15 @@
-.containerAll { 
-    background-color: var(--background);
-    user-select: none;
-    width: 100wh;
-    height: 100vh;
+.containerAll, .top, .bot {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.containerAll { 
+    background-color: var(--background);
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+  
 }
 
 .container {
@@ -18,9 +22,6 @@
 
 .top { 
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 24px;
     color: var(--primary-white);
     font-weight: bold;
@@ -29,9 +30,6 @@
 .bot { 
     height: 320px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     color: var(--primary-white);
     font-size: 18px;
@@ -39,8 +37,6 @@
 }
 
 .bot img { 
-    width: 160px;
-    height: 160px;
     margin-bottom: 10px;
     cursor: pointer;
 }

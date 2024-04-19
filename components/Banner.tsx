@@ -48,7 +48,7 @@ const Banner = () => {
             <IoMdAdd className={styles.icon} />
             Add List
           </button>
-          <button className={styles.btnInfo} onClick={() => router.push(`/details/${poster.id}`)}>
+          <button className={styles.btnInfo} onClick={() => router.push(`/details/${poster?.id}`)}>
             <AiOutlineInfoCircle className={styles.icon} />
             More Info
           </button>

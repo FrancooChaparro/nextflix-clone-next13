@@ -4,26 +4,22 @@ import styles from "../Details.module.css";
 import { MoviesData } from "@/models/data";
 import { MovieObject } from "@/app/types";
 import { useRouter } from "next/navigation";
-import { IoIosArrowBack, IoMdArrowRoundBack } from "react-icons/io";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
-export default function Page({ params }: { params: { slug: string } }) {
-  const [movieID, setmovieID] = useState<MovieObject>();
-  const AllMovies: Array<MovieObject> | [] = MoviesData;
+export default function Page({ params: { slug } }: { params: { slug: string } }) {
+  const [movieID, setMovieID] = useState<MovieObject>();
   const router = useRouter();
 
-  const param = async () => {
-    const mov = AllMovies.find((e) => e.id === params.slug);
-    if (mov) {
-      setmovieID(mov);
-    } else {
-      router.push("/")
-    }
-  };
-
   useEffect(() => {
-    param();
-    // eslint-disable-next-line
-  }, [params.slug]);
+    const AllMovies: Array<MovieObject> = MoviesData;
+    const foundMovie = AllMovies.find((movie) => movie.id === slug);
+    if (foundMovie) {
+      setMovieID(foundMovie);
+    } else {
+      router.push("/");
+    }
+  }, [slug, router]);
+
 
   if (movieID === undefined) {
     return (
